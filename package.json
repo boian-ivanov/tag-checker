@@ -11,6 +11,7 @@
     "axios": "^0.19.2",
     "buefy": "^0.8.16",
     "gridsome": "^0.7.0",
+    "netlify-lambda": "^1.6.3",
     "vue-clipboard2": "^0.3.1"
   }
 }
