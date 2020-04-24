@@ -1,0 +1,16 @@
+{
+  "name": "tag-gen",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "postinstall": "netlify-lambda install"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "buefy": "^0.8.16",
+    "gridsome": "^0.7.0",
+    "vue-clipboard2": "^0.3.1"
+  }
+}
