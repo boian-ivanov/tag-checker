@@ -85,8 +85,14 @@ export default {
         return acc
       }, [])
     },
-    arrayTags() {
+    arrayTags: {
+      get () {
         return this.tagsString.split(' ').filter(val => val[0] === '#')
+      },
+      set (newValue) {
+        this.tagsString = newValue.join(' ')
+        return newValue
+      }
     },
     numberOfTags () {
       return this.arrayTags.length
