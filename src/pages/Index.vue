@@ -35,7 +35,7 @@ export default {
   data: () => ({
     queryStr: '',
     endpoint: '/.netlify/functions/getTags',
-    arrayTags: [],
+    tagsString: '',
     blacklist: [
       '#bhfyp', '#like', '#likes', '#likeforlikes', '#ig', '#instagram', '#follow',
       '#followforfollow', '#me', '#girl', '#memes', '#selfie', '#boy', ]
@@ -46,15 +46,12 @@ export default {
       try {
         let response = await axios.get(this.endpoint + '?tag=' + this.queryStr)
 
-        this.makeTagsIntoArray(response.data.tags)
+        this.tagsString += response.data.tags
         this.resetQueryString()
       } catch (e) {
         this.$buefy.dialog.alert('Something went wrong! It\'s possible that the requested tag doesn\'t exist')
       }
       loadingComponent.close()
-    },
-    makeTagsIntoArray (tags) {
-      this.arrayTags = this.arrayTags.concat(tags.split(' '))
     },
     resetQueryString () {
       this.queryStr = ''
@@ -88,8 +85,8 @@ export default {
         return acc
       }, [])
     },
-    tagsString () {
-      return this.arrayTags.join(' ')
+    arrayTags() {
+        return this.tagsString.split(' ').filter(val => val[0] === '#')
     },
     numberOfTags () {
       return this.arrayTags.length
