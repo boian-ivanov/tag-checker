@@ -1,14 +1,15 @@
-# Default starter for Gridsome
+# Overview
 
-This is the project you get when you run `gridsome create new-project`.
+Quick one-day project to build a tool for managing Instagram hashtags, giving you the ability to quickly find potential tags based on your specified topic.
 
-### 1. Install Gridsome CLI tool if you don't have
+This project uses as a tech stack **Gridsome**, **Buefy**, **Lambda functions** (through Netlify) and **Netlify** as a CI/CD pipeline and hosting.
 
-`npm install --global @gridsome/cli`
+As per a normal **Gridsome** project, to run it locally you can follow the following instructions:
 
-### 2. Create a Gridsome project
+1. Clone the repo in a directory of your choice `git clone https://github.com/boian-ivanov/tag-checker`
+2. Cd into the directory `cd tag-checker`
+3. Run `npm install` or `yarn install`
+4. Run `npm run develop` or `yarn run develop`
+5. Ready to play locally.
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+*Disclaimer: This software was a quick made to work situation. It may very well **not** work as intended. You have been warned!*
